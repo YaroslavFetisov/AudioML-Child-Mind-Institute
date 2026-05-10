@@ -11,7 +11,7 @@ This study delineates the design and validation of a high-performance machine le
 
 ## 0. TL;DR (Executive Technical Summary)
 *   **Final Metrics:** **Private Score 0.479** | OOF QWK 0.4615 | Public 0.441.
-*   **Objective Breakthrough:** Switch to **Tweedie distribution ($ \rho=1.5 $)** on Boosting heads to accommodate zero-inflation and target skewness.
+*   **Objective Breakthrough:** Switch to **Tweedie distribution ($\rho=1.5$)** on Boosting heads to accommodate zero-inflation and target skewness.
 *   **Feature Backbone:** CNN-based **TSAE 16-dim manifold compression** coupled with statistical actigraphy aggregations.
 *   **Ensemble Synergy:** Multi-layer blend anchored by **ExtraTrees (44.6% weight)** + dynamic SLSQP threshold optimization.
 *   **Stability Anchor:** Strategic retention of zero-weighted models (CatBoost/Ridge) strictly as **high-entropy variance gates** for reliable In-Fold Pseudo-Labeling.
@@ -54,7 +54,7 @@ The cornerstone of our solution’s reliability is the strict enforcement of a *
 
 ### 3.2 Advanced Objective Calibration: Tweedie Distribution
 Standard Mean Squared Error (MSE) minimizes squared residuals but assumes simple symmetric noise. Given the heavily right-skewed Poisson-like frequency of high-level internet usage metrics, we refactored primary Boosted architectures (`LightGBM`, `XGBoost`) to exploit the **Tweedie Distribution function**:
-*   **Parameterization:** Variance power $ \rho = 1.5 $ was adopted, fitting the compound Poisson-Gamma paradigm perfectly for zero-inflated datasets with strictly continuous, heavy-tailed positives.
+*   **Parameterization:** Variance power $\rho = 1.5$ was adopted, fitting the compound Poisson-Gamma paradigm perfectly for zero-inflated datasets with strictly continuous, heavy-tailed positives.
 *   This strategic shift rendered standard Boosters sensitive to moderate/extreme utilization vectors, yielding measurable leaps in validation consistency.
 
 ### 3.3 Dynamic In-Fold Pseudo-Labeling (Uncertainty Variance Gating)
