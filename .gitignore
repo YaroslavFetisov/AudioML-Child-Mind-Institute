@@ -1,0 +1,19 @@
+# Data and Model Artifacts
+data/
+catboost_info/
+*.csv
+*.parquet
+*.pth
+*.h5
+
+# Python Specific
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Specific
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+.idea/
